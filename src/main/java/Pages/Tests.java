@@ -25,14 +25,14 @@ public class Tests {
     }
 
     @Test
-    public void scenario_1(){
+    public void  test_scenario_1(){
         page_objects.find_smartfon_and_tv_button();
         page_objects.find_phone_button();
         page_objects.find_smartfon_button();
     }
 
     @Test
-    public void scenario_2(){
+    public void test_scenario_2(){
         page_objects.find_tovari_dlya_doma_button();
         page_objects.find_bitovaya_chimia_button();
         page_objects.find_dlya_stirki_button();
@@ -40,7 +40,7 @@ public class Tests {
     }
 
     @Test
-    public void scenario_3(){
+    public void test_scenario_3(){
         page_objects.find_smartfon_and_tv_button();
         page_objects.find_phone_button();
         page_objects.find_smartfon_button();
