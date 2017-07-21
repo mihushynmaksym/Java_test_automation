@@ -3,8 +3,12 @@ package Pages;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,13 +23,14 @@ public class Tests {
         // открыть https://rozetka.com.ua/
         wd.get("https://rozetka.com.ua/");
         // таймер 10 сек для прогрузки сайта.
+        wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         page_objects = new Page_objects(wd);
+        
 
     }
 
     @Test
     public void  test_scenario_1(){
-        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         page_objects.find_smartfon_and_tv_button();
         page_objects.find_phone_button();
         page_objects.find_smartfon_button();
@@ -33,7 +38,6 @@ public class Tests {
 
     @Test
     public void test_scenario_2(){
-        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         page_objects.find_tovari_dlya_doma_button();
         page_objects.find_bitovaya_chimia_button();
         page_objects.find_dlya_stirki_button();
@@ -42,7 +46,6 @@ public class Tests {
 
     @Test
     public void test_scenario_3(){
-        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         page_objects.find_smartfon_and_tv_button();
         page_objects.find_phone_button();
         page_objects.find_smartfon_button();
