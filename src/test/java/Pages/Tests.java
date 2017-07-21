@@ -23,7 +23,7 @@ public class Tests {
         // открыть https://rozetka.com.ua/
         wd.get("https://rozetka.com.ua/");
         // таймер 10 сек для прогрузки сайта.
-        wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         page_objects = new Page_objects(wd);
         
 
